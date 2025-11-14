@@ -1,5 +1,12 @@
 # DevConnect
 
+
+<img width="1363" height="676" alt="image" src="https://github.com/user-attachments/assets/69bc4a39-05e4-4db8-a434-d55edcd43abc" />
+
+
+<img width="1365" height="672" alt="image" src="https://github.com/user-attachments/assets/226afa89-5584-4b1c-a95b-d1f1a8da5e9b" />
+
+
 A modern social platform for developers to share ideas, build communities, and connect with like-minded developers worldwide.
 
 ## 📋 Table of Contents
