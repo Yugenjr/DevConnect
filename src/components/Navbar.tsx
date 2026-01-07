@@ -49,18 +49,18 @@ const Navbar = () => {
                         <Sun className="w-5 h-5" />
                     )}
                 </button>
-                {user?.user_metadata?.avatar_url && (
-                    <img 
-                        src={user.user_metadata.avatar_url}
-                        alt="User Avatar"
-                        className="w-9 h-9 rounded-full ring-2 ring-cyan-400/50"
-                    />
-                )}
-                {isLoading ? (
-                  <div className="px-4 py-2 font-mono text-sm text-gray-400">loading...</div>
-                    ) : user ? (
+                {user ? (
                     <>
-                        <span className="font-mono text-sm text-cyan-300">{displayName}</span>
+                        <Link to="/profile" className="font-mono text-sm text-cyan-300 hover:text-cyan-400 transition flex items-center gap-2">
+                            {user?.user_metadata?.avatar_url && (
+                                <img 
+                                    src={user.user_metadata.avatar_url}
+                                    alt="User Avatar"
+                                    className="w-6 h-6 rounded-full ring-2 ring-cyan-400/50"
+                                />
+                            )}
+                            {displayName}
+                        </Link>
                         <button 
                             onClick={signOut} 
                             className="px-4 py-2 bg-red-900/20 hover:bg-red-900/40 border border-red-500/50 rounded-lg text-red-300 font-mono text-sm transition"
@@ -69,12 +69,20 @@ const Navbar = () => {
                         </button>
                     </>
                 ) : (   
-                    <button 
-                        onClick={signInWithGithub} 
-                        className="px-4 py-2 bg-cyan-900/30 hover:bg-cyan-900/50 border border-cyan-400/50 rounded-lg text-cyan-300 font-mono text-sm transition"
-                    >
-                        sign in
-                    </button>
+                    <>
+                        <Link 
+                            to="/login"
+                            className="px-4 py-2 bg-cyan-900/30 hover:bg-cyan-900/50 border border-cyan-400/50 rounded-lg text-cyan-300 font-mono text-sm transition"
+                        >
+                            sign in
+                        </Link>
+                        <Link 
+                            to="/register"
+                            className="px-4 py-2 bg-cyan-500 hover:bg-cyan-600 rounded-lg text-slate-900 font-mono text-sm font-bold transition"
+                        >
+                            sign up
+                        </Link>
+                    </>
                 )}
             </div>
 
@@ -127,16 +135,21 @@ const Navbar = () => {
                     </>
                 )}
               </button>
-              {user?.user_metadata?.avatar_url && (
-                <img
-                  src={user.user_metadata.avatar_url}
-                  alt="User Avatar"
-                  className="w-9 h-9 rounded-full ring-2 ring-cyan-400/50"
-                />
-              )}
               {user ? (
                 <>
-                  <span className="font-mono text-sm text-cyan-300">{displayName}</span>
+                  <Link 
+                    to="/profile"
+                    className="w-full flex items-center gap-3 px-4 py-2 bg-cyan-900/30 hover:bg-cyan-900/50 border border-cyan-400/50 rounded-lg text-cyan-300 font-mono text-sm transition"
+                  >
+                    {user?.user_metadata?.avatar_url && (
+                      <img
+                        src={user.user_metadata.avatar_url}
+                        alt="User Avatar"
+                        className="w-6 h-6 rounded-full ring-2 ring-cyan-400/50"
+                      />
+                    )}
+                    {displayName}
+                  </Link>
                   <button 
                     onClick={signOut} 
                     className="w-full px-4 py-2 bg-red-900/20 hover:bg-red-900/40 border border-red-500/50 rounded-lg text-red-300 font-mono text-sm transition"
@@ -145,12 +158,20 @@ const Navbar = () => {
                   </button>
                 </>
               ) : (
-                <button 
-                  onClick={signInWithGithub} 
-                  className="w-full px-4 py-2 bg-cyan-900/30 hover:bg-cyan-900/50 border border-cyan-400/50 rounded-lg text-cyan-300 font-mono text-sm transition"
-                >
-                  sign in
-                </button>
+                <>
+                  <Link 
+                    to="/login"
+                    className="w-full block text-center px-4 py-2 bg-cyan-900/30 hover:bg-cyan-900/50 border border-cyan-400/50 rounded-lg text-cyan-300 font-mono text-sm transition"
+                  >
+                    sign in
+                  </Link>
+                  <Link 
+                    to="/register"
+                    className="w-full block text-center px-4 py-2 bg-cyan-500 hover:bg-cyan-600 rounded-lg text-slate-900 font-mono text-sm font-bold transition"
+                  >
+                    sign up
+                  </Link>
+                </>
               )}
             </div>
           </div>
