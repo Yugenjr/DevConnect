@@ -64,7 +64,7 @@ const Home = () => {
                 </Link>
                 <Link 
                   to="/communities"
-                  className="px-6 py-3 bg-slate-800/50 hover:bg-slate-800 border border-gray-600/30 rounded-lg text-gray-300 font-mono font-bold transition-all duration-300"
+                  className="px-6 py-3 bg-slate-800/50 hover:bg-cyan-700 border border-gray-600/30 rounded-lg text-gray-300 font-mono font-bold transition-all duration-300"
                 >
                   explore communities
                 </Link>

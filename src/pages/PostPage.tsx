@@ -23,12 +23,12 @@ const PostPage = () => {
         >
           <Link
             to="/"
-            className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-mono text-sm transition px-4 py-2 rounded-lg"
+            className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-mono text-sm transition"
             style={{
-              background: 'rgba(15,23,42,0.5)',
-              boxShadow: '0 2px 12px 0 rgba(0,0,0,0.08)',
-              backdropFilter: 'blur(4px)',
-              opacity: 0.92,
+              background: 'rgba(0,0,0,0)',
+              boxShadow: 'none',
+              backdropFilter: 'none',
+              opacity: 1,
               pointerEvents: 'auto',
             }}
           >
